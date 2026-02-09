@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SixaMobile from './Comp/SixaMobile';
 import SixaMobileApp from './Comp/SixaApp';
