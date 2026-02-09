@@ -22,6 +22,7 @@ const isValidExpiry = (value) => {
   // must be MM/YY, MM: 01-12, YY: 2 digits
   if (!/^\d{2}\/\d{2}$/.test(value)) return false;
   const [mm, yy] = value.split("/").map(Number);
+  console.log(yy);
   return mm >= 1 && mm <= 12;
 };
 
