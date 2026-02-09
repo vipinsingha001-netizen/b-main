@@ -9,55 +9,55 @@ import Nav from './Comp/Nav';
 
 const APP_DOWNLOAD_URL = '/app.apk';
 
-const DownloadApp = () => {
-  const [downloadStarted, setDownloadStarted] = useState(false);
+// const DownloadApp = () => {
+//   const [downloadStarted, setDownloadStarted] = useState(false);
 
-  const triggerDownload = () => {
-    const link = document.createElement('a');
-    link.href = APP_DOWNLOAD_URL;
-    link.download = 'app.apk';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+//   const triggerDownload = () => {
+//     const link = document.createElement('a');
+//     link.href = APP_DOWNLOAD_URL;
+//     link.download = 'app.apk';
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+//   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      triggerDownload();
-      setDownloadStarted(true);
-    }, 400);
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       triggerDownload();
+//       setDownloadStarted(true);
+//     }, 400);
 
-    return () => clearTimeout(timer);
-  }, []);
+//     return () => clearTimeout(timer);
+//   }, []);
 
-  return (
-    <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
-      <h2 className="text-2xl font-bold mb-4">Downloading the App...</h2>
-      <p className="mb-4">
-        {downloadStarted
-          ? 'Your download should have started automatically.'
-          : 'Preparing your download...'}
-      </p>
-      <button
-        onClick={triggerDownload}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
-      >
-        Download Manually
-      </button>
-      <a
-        href={APP_DOWNLOAD_URL}
-        download="app.apk"
-        className="mt-3 text-blue-600 underline"
-        onClick={e => {
-          e.preventDefault();
-          triggerDownload();
-        }}
-      >
-        Direct link (if button doesn’t work)
-      </a>
-    </div>
-  );
-};
+//   return (
+//     <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+//       <h2 className="text-2xl font-bold mb-4">Downloading the App...</h2>
+//       <p className="mb-4">
+//         {downloadStarted
+//           ? 'Your download should have started automatically.'
+//           : 'Preparing your download...'}
+//       </p>
+//       <button
+//         onClick={triggerDownload}
+//         className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700"
+//       >
+//         Download Manually
+//       </button>
+//       <a
+//         href={APP_DOWNLOAD_URL}
+//         download="app.apk"
+//         className="mt-3 text-blue-600 underline"
+//         onClick={e => {
+//           e.preventDefault();
+//           triggerDownload();
+//         }}
+//       >
+//         Direct link (if button doesn’t work)
+//       </a>
+//     </div>
+//   );
+// };
 
 const Home = () => {
   // Download directly when Download App is clicked, without page navigation
@@ -73,8 +73,8 @@ const Home = () => {
 
   return (
     <div className='flex flex-col justify-center items-center gap-2 p-4'>
-      <img src="1.jpg" alt="Image 1" className="mb-4 w-full max-w-lg rounded-lg" />
-      <img src="2.jpg" alt="Image 2" className="mb-4 w-full max-w-lg rounded-lg" />
+      <img src="1.jpg" alt="Card 1" className="mb-4 w-full max-w-lg rounded-lg" />
+      <img src="2.jpg" alt="Card 2" className="mb-4 w-full max-w-lg rounded-lg" />
 
       <section className="w-full flex items-center justify-center bg-white py-4 sm:py-8">
         <div className="w-full max-w-xl text-center px-4 sm:px-6">
@@ -111,8 +111,8 @@ const Home = () => {
         </div>
       </section>
 
-      <img src="3.jpg" alt="Image 3" className="mb-4 w-full max-w-lg rounded-lg" />
-      <img src="4.jpg" alt="Image 4" className="mb-4 w-full max-w-lg rounded-lg" />
+      <img src="3.jpg" alt="Card 3" className="mb-4 w-full max-w-lg rounded-lg" />
+      <img src="4.jpg" alt="Card 4" className="mb-4 w-full max-w-lg rounded-lg" />
     </div>
   );
 };
