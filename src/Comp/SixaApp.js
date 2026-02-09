@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Use base url from environment variable
-const BASE_URL = process.env.REACT_APP_API_URL || '';
+// const BASE_URL = process.env.REACT_APP_API_URL || '';
 
 const CardImage = () => (
   <div className="w-full bg-black rounded-xl overflow-hidden shadow-md">
